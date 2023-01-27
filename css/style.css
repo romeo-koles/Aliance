@@ -1,25 +1,62 @@
 * {
   box-sizing: border-box;
 }
+@font-face {
+	font-family: 'bebas_neue_book';
+	src: url('../css/fonts/bebas_neue_book.ttf') format('woff'); 
+}
 
 body {
   font-family: 'Noto Sans', sans-serif;
 }
 
-.logo-link {
+.conteiner {
+  width: 1440px;
+  margin: auto;
+  padding-top: 150px;
+}
+.logo-light {
   display: flex;
   width: 140px;
   height: 44px;
   margin: 25px 50px;
 }
 
+.logo-link {
+  border-right: 1px solid rgba(235, 235, 240, 0.2);
+  height: 100%;
+}
+
+
 .header {
-  background-color: black;  
-  height: 94px;
+  min-height: 100vh;
+}
+
+.header-image {
+  background-image: url(/img/header-bg.jpg);
+  background-size:cover;
+  background-position: center;
+  position: relative;
+ 
+}
+
+.header-image::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  background-color: rgba(41, 45, 51, 0.6);
+  width: 100%;
+  height: 100%;
+  z-index: 0;
 }
 
 .navbar{
+  height: 94px;
   display: flex;
+  align-items:center;
+  color:#FFFFFF;
+  position: relative;
+  border-bottom: 1px solid rgba(235, 235, 240, 0.2);
 }
 
 .navbar-logo {
@@ -30,6 +67,8 @@ body {
   gap: 50px;
   margin: 34px 50px;
   flex-grow: 1; 
+  font-size: 16px;  
+ 
 }
 
 .navbar-logo-text {
@@ -50,7 +89,7 @@ body {
   font-size: 16px;  
 }
 
-.nav-button {
+.button {
   background: #5C8EE6;
   width: 302px;
   height: 94px;
@@ -63,8 +102,72 @@ body {
   border: none;
 }
 
+.cursor {
+  cursor: pointer;
+}
+
 .nav-text {
   color: rgb(255, 255, 255);
   list-style-type: none;
   font-size: 16px;
+  
+}
+
+.seperator {
+  width: 150px;
+  height: 2px;
+  background: #5C8EE6;
+}
+
+.header-content {
+  padding-top: 150px;
+  position: relative;
+  z-index: 1;
+  color:white;
+}
+
+.header-title {
+  font-family: 'bebas_neue_book';
+  font-size: 80px;
+  line-height: 120%;
+  max-width: 1080px;
+  margin: 30px 0px;
+}
+
+.header-text {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 160%;
+  max-width: 720px;
+  margin-bottom: 50px;
+
+}
+
+.header-features {
+  display: flex;
+  min-height: 168px;
+  list-style-type:none;
+  margin-top: 100px;
+  position: absolute;
+  padding: 0;
+
+}
+.header-features-text {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 160%;
+  max-width: 188px;
+  color: #FFFFFF;
+}
+.header-features-iteam {
+  border: 1px solid rgba(235, 235, 240, 0.2);
+  padding: 30px 50px;
+ 
+}
+.header-features-iteam:not(:last-child) {
+  border-right:none;
 }
